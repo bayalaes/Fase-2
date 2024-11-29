@@ -1,0 +1,137 @@
+/* ProductoPage.css */
+
+.producto-page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #acd3ff; /* Color de fondo similar al de registro */
+}
+
+.producto-page {
+  width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  max-width: 760px; /* Incrementamos el max-width para que sea más amplio */
+  margin: 20px;
+  padding: 20px;
+  background-color: white; /* Fondo blanco para la sección de productos */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  text-align: center;
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn-submit, .btn-regresar, .btn-eliminar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+  background-color: #0070ba;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #005c99;
+}
+
+.btn-regresar {
+  background-color: #f39c12;
+  color: white;
+  margin-top: 15px;
+}
+
+.btn-regresar:hover {
+  background-color: #e67e22;
+}
+
+.lista-productos {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.producto-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.producto-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.producto-details span {
+  color: #333333;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 14px;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .producto-page {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .titulo {
+    font-size: 20px;
+  }
+
+  .form-producto {
+    gap: 10px;
+  }
+
+  .input {
+    font-size: 14px;
+  }
+
+  .btn-submit, .btn-regresar, .btn-eliminar {
+    font-size: 14px;
+  }
+
+  .producto-item {
+    padding: 10px;
+  }
+
+  .producto-details span {
+    font-size: 14px;
+  }
+}

@@ -1,35 +1,36 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/login', {
+      const response = await axios.post("http://localhost:8000/api/login", {
         email,
         password,
       });
       console.log(response.data);
-      // Guardar token en localStorage o contexto
-      localStorage.setItem('token', response.data.token);
-      navigate('/clientes/list'); // Redirigir a la lista de clientes o dashboard
+      localStorage.setItem("token", response.data.token);
+      navigate("/clientes/list");
     } catch (error) {
-      console.error('Error al iniciar sesión', error);
+      console.error("Error al iniciar sesión", error);
     }
   };
 
-  // Función para redirigir a la página de registro
   const handleRegisterRedirect = () => {
-    navigate('/register'); // Cambia '/register' por la ruta correspondiente a tu página de registro
+    navigate("/register");
   };
 
-  return (
-    <div>
+  // Login.js
+return (
+  <div className="login-container">
+    <div className="login-box">
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -48,11 +49,12 @@ const Login = () => {
         />
         <button type="submit">Iniciar Sesión</button>
       </form>
-
-      {/* Botón para redirigir al registro */}
-      <button onClick={handleRegisterRedirect}>¿No tienes cuenta? Regístrate</button>
+      <button className="register-redirect" onClick={handleRegisterRedirect}>
+        ¿No tienes cuenta? Regístrate
+      </button>
     </div>
-  );
+  </div>
+);
 };
 
 export default Login;

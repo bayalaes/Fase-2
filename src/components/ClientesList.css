@@ -1,0 +1,99 @@
+/* ListaClientes.css */
+.clientes-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #acd3ff;
+}
+
+.clientes-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.clientes-box h1 {
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.clientes-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cliente-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.cliente-item span {
+  font-size: 16px;
+  color: #333;
+}
+
+.cliente-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-editar,
+.btn-eliminar {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+  background-color: #0070ba;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-editar:hover {
+  background-color: #005c99;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+.crear-cliente-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.crear-cliente-link:hover {
+  background-color: #27ae60;
+}
